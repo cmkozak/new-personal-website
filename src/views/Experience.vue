@@ -1,7 +1,6 @@
 <template>
-  <h1>Contact</h1>
-
-  <div class="content contact"></div>
+  <h1>Experience</h1>
+  <div class="content experience"></div>
 </template>
 
 <script>

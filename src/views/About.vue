@@ -1,15 +1,11 @@
 <template>
-  <div class="main about">
-    <h1>About</h1>
-  </div>
+  <h1>About</h1>
+  
+  <div class="content about"></div>
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
