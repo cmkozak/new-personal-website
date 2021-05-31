@@ -10,8 +10,19 @@
         :id="`${idx}`"
         @click="expandCard(idx)"
       >
-        <img :src="`${projects.img}`" />
+        <div class="top-card-content">
+          <img :src="`${projects.img}`" />
+          <span v-if="projects.expanded === true" class="expanded side">
+            <p>{{ projects.languages[0] }}</p>
+          </span>
+        </div>
         <p>{{ projects.name }}</p>
+        <span
+          v-if="projects.expanded === true"
+          class="expanded content"
+          v-html="projects.info"
+        >
+        </span>
       </div>
     </div>
   </div>
@@ -21,11 +32,13 @@
 import { mapState } from "vuex";
 
 export default {
+  // TODO: host information locally instead of using the store
   computed: {
     ...mapState(["projectdata"]),
   },
   methods: {
     expandCard(index) {
+      // TODO: Need better logic here
       let cardElements = document.getElementsByClassName("card");
       for (let i = 0; i < this.projectdata.projects.length; i++) {
         if (
@@ -61,6 +74,7 @@ export default {
   background-color: rgb(46, 46, 46) !important;
   box-shadow: 4px 4px 3px white;
   display: inline-block;
+  vertical-align: top;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -103,12 +117,19 @@ export default {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  img {
-    filter: none;
-    -webkit-transition: filter 1s ease-in-out;
-    -moz-transition: filter 1s ease-in-out;
-    -o-transition: filter 1s ease-in-out;
-    transition: filter 1s ease-in-out;
+  .top-card-content {
+    display: flex;
+    justify-content: space-between;
+    img {
+      filter: none;
+      -webkit-transition: filter 1s ease-in-out;
+      -moz-transition: filter 1s ease-in-out;
+      -o-transition: filter 1s ease-in-out;
+      transition: filter 1s ease-in-out;
+    }
+    .side {
+      vertical-align: center;
+    }
   }
 }
 </style>

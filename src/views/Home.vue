@@ -1,8 +1,5 @@
 <template>
   <div class="content home">
-    <h2 class="info">
-      Hi... I'm Michael
-    </h2>
     <h5 class="secondary-info">
       Software Developer
     </h5>
@@ -18,5 +15,11 @@
   text-align: center;
   margin-top: 20vh;
   font-size: 50px;
+}
+.secondary-info {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="nav" :class="{ home: this.$route.path == '/' }">
     <h1 id="logo">Michael Kozak</h1>
     <div class="nav-buttons">
       <router-link to="/">Home</router-link> |
@@ -16,12 +16,17 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #nav {
   text-align: center;
-  width: 33%;
+  width: 40%;
   #logo {
-    font-size: 50px;
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .nav-buttons {
+    font-size: 20px;
   }
   a {
     font-weight: bold;
@@ -36,5 +41,17 @@ export default {};
 hr {
   margin-top: 20px;
   width: 100%;
+}
+
+.home {
+  #logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  hr {
+    display: none;
+  }
 }
 </style>
