@@ -1,8 +1,5 @@
 <template>
   <div class="content home">
-    <h5 class="secondary-info">
-      Software Developer
-    </h5>
   </div>
 </template>
 
