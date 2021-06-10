@@ -17,22 +17,15 @@ export default {
 
 <style lang="scss">
 * {
-  background-color: #222629;
+  //background-color: #222629;
+  background-color: #0b0c10;
 }
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #86c232;
-}
-
-.main h1 {
-  position: absolute;
-  font-size: 80px;
-  color: #fff;
-  font-family: "Amatic SC", cursive;
-  top: -40px;
-  right: 10vw;
+  //color: #86c232;
+  color: #d1d1d1;
 }
 </style>

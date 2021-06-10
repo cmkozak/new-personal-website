@@ -1,6 +1,4 @@
 <template>
-  <h1>Projects</h1>
-
   <div class="content projects">
     <div class="card-container">
       <div
@@ -23,7 +21,7 @@
               target="_blank"
             >
               <span>View on Github</span>
-              <img src="../assets/images/GitHub-Mark-Light-64px.png" />
+              <img src="../assets/images/github.png" />
             </a>
           </span>
         </div>
@@ -54,7 +52,7 @@ export default {
           expanded: false,
           info: `In my previous portfolio, my goal was to expand my knowledge on React and Javascript by creating a single page website that features a large amount of animations and transitions.<br/>
       Before starting this website I had never used React before but I knew that I wanted to make my portfolio interactive so I started learning React a few months prior to creating this website.<br/>
-      I eventaully scrapped the project in early 2019.`,
+      I eventaully scrapped the project in early 2020.`,
         },
         {
           name: "Currency Converter",
@@ -64,9 +62,9 @@ export default {
           demolink: "",
           inprogress: false,
           expanded: false,
-          info: `"I created this project mostly to familiarize myself with using HTTP GET requests. Creating a simple single-page website that converts from 12 different currencies types to many different currencies used all over the world.<br/>
-          The website I use to get the information from is http://www.floatrates.com/json-feeds.html which offers free currency converters from many different countries updated daily.</br>
-          The project doesn’t look very pretty and I didn’t spend a lot of time on the design parts of it. I mostly just wanted to quickly throw some design together and get used to utilizing API requests."`,
+          info: `I created this project mostly to familiarize myself with API's and GET requests. It's a simple single-page website that converts currencies.<br/>
+          The website I use to get the information from is <a href="http://www.floatrates.com/json-feeds.html">Floatrates</a> which offers free currency converters from many different countries.</br>
+          The project isn't pretty but I mostly just wanted to throw something together to get used to utilizing API requests.`,
         },
         {
           name: "New Portfolio Website",
@@ -76,7 +74,7 @@ export default {
           demolink: "",
           inprogress: true,
           expanded: false,
-          info: `""`,
+          info: ``,
         },
       ],
     };
@@ -104,10 +102,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card-container {
-  margin-top: 50px;
-}
-
 .card {
   margin-left: 40px;
   margin-bottom: 40px;
@@ -162,6 +156,9 @@ export default {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  &:hover {
+    cursor: auto;
+  }
   .content {
     display: block;
     padding-left: 8px;
