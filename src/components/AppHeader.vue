@@ -45,18 +45,15 @@ export default {
           link: "https://www.instagram.com/cmkozak4",
         },
         {
-          name: "Resume",
-          image: require("@/assets/images/document.png"),
-          link:
-            "https://docs.google.com/document/d/1ggZys3WpinWR53gihvgWKtQV0h0J7jTj-uZ9OQi0sQA/edit?usp=sharing",
+          name: "Email",
+          image: require("@/assets/images/email.png"),
+          link: "charlesmichaelk@gmail.com",
         },
       ],
     };
   },
   watch: {
     $route(to, from) {
-      console.log(to);
-      console.log(from);
       if (to.path == "/") {
         document.getElementById("logo").classList.add("logo-translate");
         document.getElementById("nav-buttons").classList.add("nav-translate");
@@ -65,9 +62,7 @@ export default {
         document.getElementById("logo").classList.add("normal");
         document.getElementById("nav-buttons").classList.add("normal");
         document.getElementById("logo-hr").classList.add("normal");
-        document
-          .getElementById("nav-buttons")
-          .classList.remove("nav-translate");
+        document.getElementById("nav-buttons").classList.remove("nav-translate");
         document.getElementById("logo").classList.remove("logo-translate");
         document.getElementById("logo-hr").classList.remove("hr-translate");
       }

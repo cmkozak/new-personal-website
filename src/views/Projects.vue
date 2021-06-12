@@ -16,6 +16,7 @@
               {{ projects.demolink }}
             </p>
             <a
+              v-if="projects.githublink"
               class="github-link"
               :href="`${projects.githublink}`"
               target="_blank"
@@ -63,7 +64,7 @@ export default {
           inprogress: false,
           expanded: false,
           info: `I created this project mostly to familiarize myself with API's and GET requests. It's a simple single-page website that converts currencies.<br/>
-          The website I use to get the information from is <a href="http://www.floatrates.com/json-feeds.html">Floatrates</a> which offers free currency converters from many different countries.</br>
+          The website I use to get the information from is Floatrates which offers free currency converters from many different countries.</br>
           The project isn't pretty but I mostly just wanted to throw something together to get used to utilizing API requests.`,
         },
         {
@@ -71,6 +72,18 @@ export default {
           languages: ["Vue"],
           img: "",
           githublink: "https://github.com/cmkozak/new-personal-website",
+          demolink: "",
+          inprogress: true,
+          expanded: false,
+          info: `After I started working at Apptegy, I decided to learn Vue in an attempt to better understand the code that I was testing<br>
+          I also knew that my personal website needed to be updated since it had been a few years since I created my old website<br>
+          Thus, I went on a journey to learn Vue and put together a new portfolio website with the skills I aquired.`,
+        },
+        {
+          name: "Poetry Social Media App",
+          languages: ["Vue"],
+          img: "",
+          githublink: "",
           demolink: "",
           inprogress: true,
           expanded: false,

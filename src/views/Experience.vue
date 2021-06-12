@@ -19,10 +19,13 @@
         </div>
       </div>
       <div class="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At deserunt
-        iste accusantium quidem, libero reprehenderit tempore error iure
-        molestias provident temporibus ea illo et hic, commodi eum ut voluptatum
-        fuga.
+        After graduating from college, I was hired onto the Technical Operations
+        team. My primary role on Tech Ops was being the head of the testing
+        team. On the testing team, we tested changes that dev made to our
+        products to ensure the changes lead up to the acceptance criteria and
+        negative acceptance criteria. In addition to testing, I focused on
+        writing Ruby console scripts to interact with our database as well as
+        focusing on our customer support chat.
       </div>
     </div>
 
@@ -38,10 +41,13 @@
         </div>
       </div>
       <div class="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
-        aperiam laudantium? Dignissimos, officia possimus odit molestiae atque,
-        non omnis sint ratione cum aperiam quam eligendi incidunt placeat, unde
-        ad modi?
+        I started interning at Apptegy when I was in my senior year of high
+        school and continued to come back every summer and winter break when I
+        was in college. I interned for many different teams, most notably the
+        People team where I assisted with an HR platform migration, Sales
+        Operations where I researched the sales team on prospective clients, and
+        the Content Migration team where I migrated static content from clients'
+        old website to our platform.
       </div>
     </div>
   </div>
