@@ -1,5 +1,5 @@
 <template>
-  <div class="content experience">
+  <div class="content experience fade-in fadeInUp">
     <div class="apptegy-header">
       <div class="name">
         Apptegy

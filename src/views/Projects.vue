@@ -1,5 +1,5 @@
 <template>
-  <div class="content projects">
+  <div class="content projects fade-in fadeInUp">
     <div class="card-container">
       <div
         v-for="(projects, idx) in projects"
@@ -17,6 +17,7 @@
             </p>
             <a
               v-if="projects.githublink"
+              v-on:click.stop
               class="github-link"
               :href="`${projects.githublink}`"
               target="_blank"
@@ -73,7 +74,7 @@ export default {
           img: "",
           githublink: "https://github.com/cmkozak/new-personal-website",
           demolink: "",
-          inprogress: true,
+          inprogress: false,
           expanded: false,
           info: `After I started working at Apptegy, I decided to learn Vue in an attempt to better understand the code that I was testing<br>
           I also knew that my personal website needed to be updated since it had been a few years since I created my old website<br>
@@ -87,14 +88,15 @@ export default {
           demolink: "",
           inprogress: true,
           expanded: false,
-          info: ``,
+          info: `To continue learning Vue I decided to create a social media app specifically for poetry.<br>
+          I wanted to give myself a large project that deals with database interaction (I'm using MongoDB) and a complex front end.<br>
+          It's still a work in progress, you can check out my progress in my Github repo!`,
         },
       ],
     };
   },
   methods: {
     expandCard(index) {
-      // TODO: Need better logic here
       let cardElements = document.getElementsByClassName("card");
       for (let i = 0; i < this.projects.length; i++) {
         if (
@@ -149,6 +151,7 @@ export default {
   }
   p {
     text-align: center;
+    font-weight: bold;
     font-size: 20px;
     margin-top: 10px;
     margin-right: 20px;
@@ -171,6 +174,7 @@ export default {
   transition: all 1s ease-in-out;
   &:hover {
     cursor: auto;
+    transform: none;
   }
   .content {
     display: block;

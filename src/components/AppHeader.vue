@@ -2,7 +2,7 @@
   <div id="nav">
     <nav id="logo">
       <h1>Michael Kozak</h1>
-      <p v-if="this.$route.path == '/'">
+      <p v-if="this.$route.path == '/'" class="fade-in fadeInUp">
         Software Developer
       </p>
     </nav>
@@ -47,7 +47,7 @@ export default {
         {
           name: "Email",
           image: require("@/assets/images/email.png"),
-          link: "charlesmichaelk@gmail.com",
+          link: "mailto:charlesmichaelk@gmail.com",
         },
       ],
     };
