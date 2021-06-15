@@ -17,7 +17,6 @@ export default {
 
 <style lang="scss">
 * {
-  //background-color: #222629;
   background-color: inherit;
 }
 
@@ -32,7 +31,6 @@ html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //color: #86c232;
   color: #d1d1d1;
 }
 
@@ -43,12 +41,17 @@ html {
   animation-fill-mode: both;
 }
 
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+.fade-in-normal {
+  -webkit-animation-name: fadeInNormal;
+  animation-name: fadeInNormal;
 }
 
-@-webkit-keyframes fadeInUp {
+.fade-in-delay {
+  -webkit-animation-name: fadeInDelay;
+  animation-name: fadeInDelay;
+}
+
+@-webkit-keyframes fadeInNormal {
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -59,10 +62,40 @@ html {
   }
 }
 
-@keyframes fadeInUp {
+@keyframes fadeInNormal {
   0% {
     opacity: 0;
     transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
   }
   100% {
     opacity: 1;

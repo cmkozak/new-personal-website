@@ -2,11 +2,11 @@
   <div id="nav">
     <nav id="logo">
       <h1>Michael Kozak</h1>
-      <p v-if="this.$route.path == '/'" class="fade-in fadeInUp">
+      <p v-if="this.$route.path == '/'" class="fade-in fade-in-delay">
         Software Developer
       </p>
     </nav>
-    <div id="nav-buttons">
+    <div id="nav-btns">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/experience">Experience</router-link> |
@@ -56,18 +56,15 @@ export default {
     $route(to, from) {
       if (to.path == "/") {
         document.getElementById("logo").classList.add("logo-translate");
-        document.getElementById("nav-buttons").classList.add("nav-translate");
+        document.getElementById("nav-btns").classList.add("nav-translate");
         document.getElementById("logo-hr").classList.add("hr-translate");
       } else if (from.path == "/") {
         document.getElementById("logo").classList.add("normal");
-        document.getElementById("nav-buttons").classList.add("normal");
+        document.getElementById("nav-btns").classList.add("normal");
         document.getElementById("logo-hr").classList.add("normal");
-        document.getElementById("nav-buttons").classList.remove("nav-translate");
+        document.getElementById("nav-btns").classList.remove("nav-translate");
         document.getElementById("logo").classList.remove("logo-translate");
         document.getElementById("logo-hr").classList.remove("hr-translate");
-      }
-      if (from.path == "/" && to.name == "Home") {
-        // TODO: Add typing/loading in animation logic
       }
     },
   },
@@ -94,7 +91,7 @@ export default {
       width: 100%;
     }
   }
-  #nav-buttons {
+  #nav-btns {
     font-size: 20px;
   }
   a {

@@ -1,5 +1,5 @@
 <template>
-  <div class="content projects fade-in fadeInUp">
+  <div class="content projects fade-in fade-in-normal">
     <div class="card-container">
       <div
         v-for="(projects, idx) in projects"
@@ -10,7 +10,10 @@
       >
         <div class="top-card-content">
           <img :src="`${projects.img}`" />
-          <span v-if="projects.expanded === true" class="expanded side">
+          <span
+            v-if="projects.expanded === true"
+            class="expanded side fade-in fade-in-delay"
+          >
             <p class="language">{{ projects.languages[0] }}</p>
             <p class="live-demo" v-if="projects.demolink">
               {{ projects.demolink }}
@@ -30,7 +33,7 @@
         <p>{{ projects.name }}</p>
         <span
           v-if="projects.expanded === true"
-          class="expanded content"
+          class="expanded content fade-in fade-in-delay"
           v-html="projects.info"
         >
         </span>

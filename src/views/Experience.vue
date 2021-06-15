@@ -1,5 +1,5 @@
 <template>
-  <div class="content experience fade-in fadeInUp">
+  <div class="content experience fade-in fade-in-normal">
     <div class="apptegy-header">
       <div class="name">
         Apptegy
@@ -19,13 +19,13 @@
         </div>
       </div>
       <div class="info">
-        After graduating from college, I was hired onto the Technical Operations
-        team. My primary role on Tech Ops was being the head of the testing
-        team. On the testing team, we tested changes that dev made to our
-        products to ensure the changes lead up to the acceptance criteria and
-        negative acceptance criteria. In addition to testing, I focused on
-        writing Ruby console scripts to interact with our database as well as
-        focusing on our customer support chat.
+        My primary role on Tech Ops is being the lead for the testing team. On
+        the testing team, we test changes that dev made to our products before
+        release to ensure that the changes lived up to the acceptance criteria
+        and to ensure that no new bugs were introduced in the changes. In
+        addition to testing, I wrote many Ruby console scripts to interact with
+        our database, assist clients in our customer support chat, and help in
+        assisting the Client Experience team.
       </div>
     </div>
 
