@@ -27,10 +27,8 @@ export default {};
     height: 30vh;
     border-radius: 5vw;
     padding: 40px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: white;
-    background-color: rgb(46, 46, 46) !important;
+    border: 1px solid white;
+    background-color: #222222;
     box-shadow: -4px 4px 3px white;
     font-size: 18px;
   }

@@ -1,5 +1,6 @@
 <template>
   <div class="content projects fade-in fade-in-normal">
+    <p>Click on a card to view more information.</p>
     <div class="card-container">
       <div
         v-for="(projects, idx) in projects"
@@ -123,12 +124,10 @@ export default {
 .card {
   margin-left: 40px;
   margin-bottom: 40px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
+  border: 1px solid white;
   width: 300px;
   height: 200px;
-  background-color: rgb(46, 46, 46) !important;
+  background-color: #2e2e2e;
   box-shadow: 4px 4px 3px white;
   display: inline-block;
   vertical-align: top;
@@ -137,7 +136,7 @@ export default {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   * {
-    background-color: rgb(46, 46, 46);
+    background-color: #2e2e2e;
   }
   img {
     margin-left: 10px;

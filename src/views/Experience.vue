@@ -61,7 +61,7 @@ export default {};
 .apptegy-header {
   text-align: center;
   line-height: 45px;
-  width: 80%;
+  width: 70%;
   margin: auto;
   margin-bottom: 40px;
   .name {
@@ -103,11 +103,21 @@ export default {};
     font-style: italic;
     font-size: 14px;
   }
+  .info {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 }
 
 hr {
   width: 40%;
   margin-top: 35px;
   margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .info {
+    margin: 0 !important;
+  }
 }
 </style>

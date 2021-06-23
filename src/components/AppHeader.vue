@@ -6,6 +6,15 @@
         Software Developer
       </p>
     </nav>
+
+    <div class="social-media-icons">
+      <div v-for="social in social" :key="social.name" class="social-icon">
+        <a :href="`${social.link}`" target="_blank">
+          <img :src="`${social.image}`" :alt="`${social.name}`" />
+        </a>
+      </div>
+    </div>
+
     <div id="nav-btns">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
@@ -13,14 +22,6 @@
       <router-link to="/projects">Projects</router-link>
     </div>
     <hr id="logo-hr" />
-  </div>
-
-  <div class="social-media-icons">
-    <div v-for="social in social" :key="social.name" class="social-icon">
-      <a :href="`${social.link}`" target="_blank">
-        <img :src="`${social.image}`" :alt="`${social.name}`" />
-      </a>
-    </div>
   </div>
 </template>
 
@@ -72,6 +73,32 @@ export default {
 </script>
 
 <style lang="scss">
+@media only screen and (max-width: 849px) {
+  #nav {
+    width: 100% !important;
+    .social-media-icons {
+      position: initial;
+      margin-top: -20px;
+      margin-bottom: 10px;
+      a img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 850px) {
+  #nav {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 850px) {
+  #logo h1 {
+    font-size: 60px !important;
+  }
+}
+
 #nav {
   text-align: center;
   width: 40%;
@@ -100,6 +127,7 @@ export default {
 
     &.router-link-exact-active {
       color: #08fdd8;
+      text-decoration: none;
     }
   }
   hr {
@@ -122,10 +150,8 @@ export default {
     display: inline-block;
     margin-left: 10px;
     margin-right: 10px;
-    a {
-      img {
-        width: 64px;
-      }
+    a img {
+      width: 64px;
     }
   }
 }
