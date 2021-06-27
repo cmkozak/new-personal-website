@@ -73,50 +73,34 @@ export default {
 </script>
 
 <style lang="scss">
-@media only screen and (max-width: 849px) {
-  #nav {
-    width: 100% !important;
-    .social-media-icons {
-      position: initial;
-      margin-top: -20px;
-      margin-bottom: 10px;
-      a img {
-        width: 40px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1280px) and (min-width: 850px) {
-  #nav {
-    width: 50% !important;
-  }
-}
-
-@media only screen and (max-width: 1000px) and (min-width: 850px) {
-  #logo h1 {
-    font-size: 60px !important;
-  }
-}
-
 #nav {
   text-align: center;
   width: 40%;
   height: 155px;
-  #logo {
-    h1 {
-      font-size: 70px;
-      margin-top: 30px;
-      margin-bottom: 30px;
+  @media only screen and (max-width: 1280px) and (min-width: 850px) {
+    width: 50%;
+  }
+  h1 {
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media only screen and (max-width: 1000px) and (min-width: 850px) {
+      font-size: 60px;
     }
-    p {
+    @media only screen and (max-width: 849px) {
       font-size: 40px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: -20px auto auto 0;
-      width: 100%;
     }
+  }
+  p {
+    font-size: 35px;
+    @media only screen and (max-width: 849px) {
+      font-size: 25px;
+    }
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: -20px auto auto 0;
+    width: 100%;
   }
   #nav-btns {
     font-size: 20px;
@@ -158,6 +142,9 @@ export default {
 
 .logo-translate {
   transform: translate(30vw, 20vw);
+  @media only screen and (max-width: 849px) {
+    transform: translateY(35vh);
+  }
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -182,5 +169,22 @@ export default {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+}
+
+@media only screen and (max-width: 849px) {
+  #nav {
+    width: 100%;
+  }
+  .social-media-icons {
+    position: initial;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    .social-icon a img {
+      width: 40px;
+    }
+  }
+  .content {
+    margin-top: 50px;
+  }
 }
 </style>

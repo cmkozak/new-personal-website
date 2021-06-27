@@ -25,7 +25,7 @@
         and to ensure that no new bugs were introduced in the changes. In
         addition to testing, I wrote many Ruby console scripts to interact with
         our database, assist clients in our customer support chat, and help in
-        assisting the Client Experience team.
+        assisting the Client Experience team overall.
       </div>
     </div>
 
@@ -58,12 +58,18 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.experience {
+  margin-bottom: 40px;
+}
 .apptegy-header {
   text-align: center;
   line-height: 45px;
   width: 70%;
   margin: auto;
   margin-bottom: 40px;
+  @media only screen and (max-width: 849px) {
+    width: 90%;
+  }
   .name {
     color: white;
     font-size: 50px;
@@ -90,6 +96,10 @@ export default {};
 .role {
   margin-left: 20%;
   margin-right: 20%;
+  @media only screen and (max-width: 849px) {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   .role-header {
     text-align: center;
     line-height: 30px;
@@ -106,6 +116,9 @@ export default {};
   .info {
     margin-left: 15%;
     margin-right: 15%;
+    @media only screen and (max-width: 1100px) {
+      margin: 0;
+    }
   }
 }
 
@@ -113,11 +126,5 @@ hr {
   width: 40%;
   margin-top: 35px;
   margin-bottom: 35px;
-}
-
-@media only screen and (max-width: 1100px) {
-  .info {
-    margin: 0 !important;
-  }
 }
 </style>

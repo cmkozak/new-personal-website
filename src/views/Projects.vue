@@ -1,6 +1,6 @@
 <template>
   <div class="content projects fade-in fade-in-normal">
-    <p>Click on a card to view more information.</p>
+    <p id="instruction">Click on a card to view more information.</p>
     <div class="card-container">
       <div
         v-for="(projects, idx) in projects"
@@ -10,28 +10,31 @@
         @click="expandCard(idx)"
       >
         <div class="top-card-content">
-          <img :src="`${projects.img}`" />
+          <img :src="`${projects.img}`" :alt="`${projects.name}`" />
+          <p class="project-name-xs">{{ projects.name }}</p>
           <span
             v-if="projects.expanded === true"
             class="expanded side fade-in fade-in-delay"
           >
-            <p class="language">{{ projects.languages[0] }}</p>
-            <p class="live-demo" v-if="projects.demolink">
+            <p class="language fade-in fade-in-delay">
+              {{ projects.languages[0] }}
+            </p>
+            <p class="live-demo fade-in fade-in-delay" v-if="projects.demolink">
               {{ projects.demolink }}
             </p>
             <a
               v-if="projects.githublink"
               v-on:click.stop
-              class="github-link"
+              class="github-link fade-in fade-in-delay"
               :href="`${projects.githublink}`"
               target="_blank"
             >
               <span>View on Github</span>
-              <img src="../assets/images/github.png" />
+              <img src="../assets/images/github.png" class="github-img" />
             </a>
           </span>
         </div>
-        <p>{{ projects.name }}</p>
+        <p class="project-name">{{ projects.name }}</p>
         <span
           v-if="projects.expanded === true"
           class="expanded content fade-in fade-in-delay"
@@ -75,7 +78,7 @@ export default {
         {
           name: "New Portfolio Website",
           languages: ["Vue"],
-          img: "",
+          img: require("@/assets/images/new-website.png"),
           githublink: "https://github.com/cmkozak/new-personal-website",
           demolink: "",
           inprogress: false,
@@ -165,6 +168,18 @@ export default {
   &:hover img {
     transform: scale(1.01);
   }
+  .project-name {
+    @media only screen and (max-width: 689px) {
+      display: none;
+    }
+  }
+  .top-card-content {
+    .project-name-xs {
+      @media only screen and (min-width: 690px) {
+        display: none;
+      }
+    }
+  }
 }
 
 .active {
@@ -181,10 +196,14 @@ export default {
   .content {
     display: block;
     padding-left: 8px;
+    padding-right: 8px;
   }
   .top-card-content {
     display: flex;
     justify-content: space-between;
+    .project-name {
+      display: none;
+    }
     img {
       filter: none;
       -webkit-transition: filter 1s ease-in-out;
@@ -193,7 +212,6 @@ export default {
       transition: filter 1s ease-in-out;
     }
     .side {
-      vertical-align: center;
       margin-left: auto;
       margin-right: auto;
     }
@@ -201,12 +219,12 @@ export default {
 }
 
 .github-link {
-  display: inline-block;
+  display: block;
   background-color: black;
   padding: 7px 7px 7px 7px;
   border-radius: 20px;
-  align-content: center;
-  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
   color: #fff;
   * {
     background-color: black;
@@ -214,12 +232,47 @@ export default {
   span {
     display: inline-block;
   }
-  img {
+  .github-img {
     width: 32px;
     height: 32px;
     display: inline-block;
     vertical-align: middle;
     margin: 0 0 0 10px;
+  }
+}
+
+#instruction {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 690px) {
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+  .card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .active {
+    height: 600px;
+    .top-card-content {
+      display: block;
+    }
+    .content {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .language {
+      font-size: 18px;
+    }
   }
 }
 </style>
