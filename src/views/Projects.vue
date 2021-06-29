@@ -6,16 +6,13 @@
         v-for="(projects, idx) in projects"
         :key="projects"
         class="card"
-        :id="`${idx}`"
+        :class="idx === active ? 'active' : ''"
         @click="expandCard(idx)"
       >
         <div class="top-card-content">
           <img :src="`${projects.img}`" :alt="`${projects.name}`" />
           <p class="project-name-xs">{{ projects.name }}</p>
-          <span
-            v-if="projects.expanded === true"
-            class="expanded side fade-in fade-in-delay"
-          >
+          <span class="expanded side fade-in fade-in-delay">
             <p class="language fade-in fade-in-delay">
               {{ projects.languages[0] }}
             </p>
@@ -36,7 +33,6 @@
         </div>
         <p class="project-name">{{ projects.name }}</p>
         <span
-          v-if="projects.expanded === true"
           class="expanded content fade-in fade-in-delay"
           v-html="projects.info"
         >
@@ -50,6 +46,7 @@
 export default {
   data() {
     return {
+      active: null,
       projects: [
         {
           name: "Old Portfolio Website",
@@ -58,7 +55,6 @@ export default {
           githublink: "https://github.com/cmkozak/personal-website",
           demolink: "",
           inprogress: false,
-          expanded: false,
           info: `In my previous portfolio, my goal was to expand my knowledge on React and Javascript by creating a single page website that features a large amount of animations and transitions.<br/>
       Before starting this website I had never used React before but I knew that I wanted to make my portfolio interactive so I started learning React a few months prior to creating this website.<br/>
       I eventaully scrapped the project in early 2020.`,
@@ -70,7 +66,6 @@ export default {
           githublink: "https://github.com/cmkozak/currency-converter",
           demolink: "",
           inprogress: false,
-          expanded: false,
           info: `I created this project mostly to familiarize myself with API's and GET requests. It's a simple single-page website that converts currencies.<br/>
           The website I use to get the information from is Floatrates which offers free currency converters from many different countries.</br>
           The project isn't pretty but I mostly just wanted to throw something together to get used to utilizing API requests.`,
@@ -82,7 +77,6 @@ export default {
           githublink: "https://github.com/cmkozak/new-personal-website",
           demolink: "",
           inprogress: false,
-          expanded: false,
           info: `After I started working at Apptegy, I decided to learn Vue in an attempt to better understand the code that I was testing<br>
           I also knew that my personal website needed to be updated since it had been a few years since I created my old website<br>
           Thus, I went on a journey to learn Vue and put together a new portfolio website with the skills I aquired.`,
@@ -94,7 +88,6 @@ export default {
           githublink: "",
           demolink: "",
           inprogress: true,
-          expanded: false,
           info: `To continue learning Vue I decided to create a social media app specifically for poetry.<br>
           I wanted to give myself a large project that deals with database interaction (I'm using MongoDB) and a complex front end.<br>
           It's still a work in progress, you can check out my progress in my Github repo!`,
@@ -104,20 +97,7 @@ export default {
   },
   methods: {
     expandCard(index) {
-      let cardElements = document.getElementsByClassName("card");
-      for (let i = 0; i < this.projects.length; i++) {
-        if (
-          cardElements[i].id == index &&
-          !cardElements[i].classList.contains("active")
-        ) {
-          cardElements[i].classList.add("active");
-          this.projects[i].expanded = true;
-        } else if (cardElements[i].classList.contains("active")) {
-          cardElements[i].classList.remove("active");
-          cardElements[i].classList.add("active-fadeout");
-          this.projects[i].expanded = false;
-        }
-      }
+      this.active === index ? (this.active = null) : (this.active = index);
     },
   },
 };
@@ -180,6 +160,9 @@ export default {
       }
     }
   }
+  .expanded {
+    display: none;
+  }
 }
 
 .active {
@@ -215,6 +198,9 @@ export default {
       margin-left: auto;
       margin-right: auto;
     }
+  }
+  .expanded {
+    display: block;
   }
 }
 
