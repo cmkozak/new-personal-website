@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <nav id="logo">
+    <nav id="logo" :class="home ? 'logo-translate' : ''">
       <h1>Michael Kozak</h1>
       <p v-if="this.$route.path == '/'" class="fade-in fade-in-delay">
         Software Developer
@@ -15,13 +15,13 @@
       </div>
     </div>
 
-    <div id="nav-btns">
+    <div id="nav-btns" :class="home ? 'nav-translate' : ''">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/experience">Experience</router-link> |
       <router-link to="/projects">Projects</router-link>
     </div>
-    <hr id="logo-hr" />
+    <hr id="logo-hr" :class="home ? 'hr-translate' : ''" />
   </div>
 </template>
 
@@ -29,6 +29,7 @@
 export default {
   data() {
     return {
+      home: null,
       social: [
         {
           name: "Github",
@@ -56,16 +57,9 @@ export default {
   watch: {
     $route(to, from) {
       if (to.path == "/") {
-        document.getElementById("logo").classList.add("logo-translate");
-        document.getElementById("nav-btns").classList.add("nav-translate");
-        document.getElementById("logo-hr").classList.add("hr-translate");
+        this.home = true;
       } else if (from.path == "/") {
-        document.getElementById("logo").classList.add("normal");
-        document.getElementById("nav-btns").classList.add("normal");
-        document.getElementById("logo-hr").classList.add("normal");
-        document.getElementById("nav-btns").classList.remove("nav-translate");
-        document.getElementById("logo").classList.remove("logo-translate");
-        document.getElementById("logo-hr").classList.remove("hr-translate");
+        this.home = false;
       }
     },
   },
@@ -80,6 +74,14 @@ export default {
   @media only screen and (max-width: 1280px) and (min-width: 850px) {
     width: 50%;
   }
+  #logo,
+  #nav-btns,
+  #logo-hr {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
   h1 {
     font-size: 70px;
     margin-top: 30px;
@@ -93,14 +95,14 @@ export default {
   }
   p {
     font-size: 35px;
-    @media only screen and (max-width: 849px) {
-      font-size: 25px;
-    }
     position: absolute;
     left: 0;
     right: 0;
     margin: -20px auto auto 0;
     width: 100%;
+    @media only screen and (max-width: 849px) {
+      font-size: 25px;
+    }
   }
   #nav-btns {
     font-size: 20px;
@@ -108,7 +110,6 @@ export default {
   a {
     font-weight: bold;
     color: rgb(172, 172, 172);
-
     &.router-link-exact-active {
       color: #08fdd8;
       text-decoration: none;
@@ -145,30 +146,12 @@ export default {
   @media only screen and (max-width: 849px) {
     transform: translateY(35vh);
   }
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 .nav-translate {
   transform: translate(0px, -120px);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 .hr-translate {
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-.normal {
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
 }
 
 @media only screen and (max-width: 849px) {

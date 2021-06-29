@@ -12,7 +12,7 @@
         <div class="top-card-content">
           <img :src="`${projects.img}`" :alt="`${projects.name}`" />
           <p class="project-name-xs">{{ projects.name }}</p>
-          <span class="expanded side fade-in fade-in-delay">
+          <span class="expanded fade-in fade-in-delay">
             <p class="language fade-in fade-in-delay">
               {{ projects.languages[0] }}
             </p>
@@ -194,13 +194,11 @@ export default {
       -o-transition: filter 1s ease-in-out;
       transition: filter 1s ease-in-out;
     }
-    .side {
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
   .expanded {
     display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
