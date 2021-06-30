@@ -19,13 +19,14 @@
         </div>
       </div>
       <div class="info">
-        My primary role on Tech Ops is being the lead for the testing team. On
-        the testing team, we test changes that dev made to our products before
-        release to ensure that the changes lived up to the acceptance criteria
-        and to ensure that no new bugs were introduced in the changes. In
-        addition to testing, I wrote many Ruby console scripts to interact with
-        our database, assist clients in our customer support chat, and help in
-        assisting the Client Experience team overall.
+        My primary role on Tech Ops is being the lead for the Tech Ops testing
+        team. On the testing team, we test changes that developers make to our
+        products before release to ensure that the changes lived up to the
+        acceptance criteria and to ensure that no new bugs were introduced in
+        the those changes. In addition to testing, I also write many Ruby
+        console scripts to interact with our database, assist clients through
+        our customer support chat, and help in assisting the Client Experience
+        team overall.
       </div>
     </div>
 
@@ -45,9 +46,9 @@
         school and continued to come back every summer and winter break when I
         was in college. I interned for many different teams, most notably the
         People team where I assisted with an HR platform migration, Sales
-        Operations where I researched the sales team on prospective clients, and
-        the Content Migration team where I migrated static content from clients'
-        old website to our platform.
+        Operations where I researched prospective clients and gathered
+        information, and the Content Migration team where I migrated static
+        content from clients' old websites to our platform.
       </div>
     </div>
   </div>

@@ -3,7 +3,7 @@
     <nav id="logo" :class="home ? 'logo-translate' : ''">
       <h1>Michael Kozak</h1>
       <p v-if="this.$route.path == '/'" class="fade-in fade-in-delay">
-        Software Developer
+        Programmer
       </p>
     </nav>
 
