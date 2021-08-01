@@ -56,9 +56,9 @@ export default {
   },
   watch: {
     $route(to, from) {
-      if (to.path == "/") {
+      if (to.path === "/") {
         this.home = true;
-      } else if (from.path == "/") {
+      } else if (from.path === "/") {
         this.home = false;
       }
     },
@@ -109,10 +109,10 @@ export default {
   }
   a {
     font-weight: bold;
-    color: rgb(172, 172, 172);
+    color: rgb(145, 145, 145);
+    text-decoration: none;
     &.router-link-exact-active {
       color: #08fdd8;
-      text-decoration: none;
     }
   }
   hr {
