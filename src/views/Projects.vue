@@ -123,7 +123,7 @@ export default {
     margin-top: 10px;
     display: block;
     width: 280px;
-    height: 141px;
+    height: fit-content;
     filter: blur(1px);
     -webkit-transition: filter 1s ease-in-out;
     -moz-transition: filter 1s ease-in-out;
