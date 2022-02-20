@@ -14,7 +14,7 @@
           Developer
         </div>
         <div class="time">
-          January 2021 - Present
+          January 2022 - Present
         </div>
       </div>
       <div class="info">
@@ -30,7 +30,7 @@
           Technical Operations
         </div>
         <div class="time">
-          June 2020 - January 2021
+          June 2020 - January 2022
         </div>
       </div>
       <div class="info">
