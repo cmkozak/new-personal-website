@@ -14,10 +14,6 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style lang="scss" scoped>
 .about {
   justify-content: center;
@@ -25,7 +21,6 @@ export default {};
   margin-right: auto;
   display: flex;
 }
-
 .left {
   width: 500px;
   min-height: fit-content;
@@ -37,7 +32,6 @@ export default {};
   font-size: 18px;
   line-height: 28px;
 }
-
 .right {
   height: 40vh;
   border-radius: 20%;

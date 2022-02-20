@@ -8,30 +8,43 @@
         August 2016 - Present
       </div>
     </div>
-
+    <div class="role">
+      <div class="role-header">
+        <div class="title">
+          Developer
+        </div>
+        <div class="time">
+          January 2021 - Present
+        </div>
+      </div>
+      <div class="info">
+        My emphasis is front-end development using the Vue.js Javascript
+        framework, however, I will sometimes handle backend Ruby on Rails
+        changes such as API endpoint modifications, schema modifications, etc.
+      </div>
+    </div>
+    <hr />
     <div class="role">
       <div class="role-header">
         <div class="title">
           Technical Operations
         </div>
         <div class="time">
-          June 2020 - Present
+          June 2020 - January 2021
         </div>
       </div>
       <div class="info">
-        My primary role on Tech Ops is being the lead for the Tech Ops testing
-        team. On the testing team, we test changes that developers make to our
-        products before release to ensure that the changes lived up to the
-        acceptance criteria and to ensure that no new bugs were introduced in
-        the those changes. In addition to testing, I also write many Ruby
-        console scripts to interact with our database, assist clients through
-        our customer support chat, and help in assisting the Client Experience
-        team overall.
+        My primary role on Tech Ops was leading the Tech Ops testing team. On
+        the testing team, we tested changes that developers make to our products
+        before release to ensure that the changes lived up to the acceptance
+        criteria and heavily focused on ensuring that no new bugs were
+        introduced in those changes. In addition to testing, I also write many
+        Ruby console scripts to interact with our database, assisted clients
+        through our customer support chat, and help in assisting the Client
+        Experience team overall with technical support.
       </div>
     </div>
-
     <hr />
-
     <div class="role">
       <div class="role-header">
         <div class="title">
@@ -53,10 +66,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style lang="scss" scoped>
 .experience {
@@ -122,7 +131,6 @@ export default {};
     }
   }
 }
-
 hr {
   width: 40%;
   margin-top: 35px;

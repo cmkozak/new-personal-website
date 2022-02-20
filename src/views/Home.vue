@@ -1,9 +1,6 @@
 <template>
-  <div class="content home">
-  </div>
+  <div class="content home"></div>
 </template>
-
-<script></script>
 
 <style lang="scss" scoped>
 .home {

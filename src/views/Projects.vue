@@ -160,7 +160,6 @@ export default {
     display: none;
   }
 }
-
 .active {
   width: 600px;
   height: 400px;
@@ -197,7 +196,6 @@ export default {
     margin-right: auto;
   }
 }
-
 .github-link {
   display: block;
   background-color: black;
@@ -220,11 +218,9 @@ export default {
     margin: 0 0 0 10px;
   }
 }
-
 #instruction {
   margin-left: 10px;
 }
-
 @media only screen and (max-width: 690px) {
   .card-container {
     display: flex;
