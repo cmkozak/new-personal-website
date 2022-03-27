@@ -6,22 +6,20 @@
         Programmer
       </p>
     </nav>
-
     <div class="social-media-icons">
       <div v-for="social in social" :key="social.name" class="social-icon">
-        <a :href="`${social.link}`" target="_blank">
+        <a tabindex="2" :href="`${social.link}`" target="_blank">
           <img :src="`${social.image}`" :alt="`${social.name}`" />
         </a>
       </div>
     </div>
-
-    <div id="nav-btns" :class="home ? 'nav-translate' : ''">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/experience">Experience</router-link> |
-      <router-link to="/projects">Projects</router-link>
+    <div id="nav-btns" :class="home && 'nav-translate'">
+      <router-link tabindex="1" to="/">Home</router-link> |
+      <router-link tabindex="1" to="/about">About</router-link> |
+      <router-link tabindex="1" to="/experience">Experience</router-link> |
+      <router-link tabindex="1" to="/projects">Projects</router-link>
     </div>
-    <hr id="logo-hr" :class="home ? 'hr-translate' : ''" />
+    <hr id="logo-hr" :class="home && 'hr-translate'" />
   </div>
 </template>
 
