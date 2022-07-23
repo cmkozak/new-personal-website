@@ -4,13 +4,13 @@
     <div class="card-container">
       <div
         v-for="(projects, idx) in projects"
-        :key="projects"
         class="card"
-        :class="idx === active ? 'active' : ''"
+        :key="projects"
+        :class="idx === active && 'active'"
         @click="expandCard(idx)"
       >
         <div class="top-card-content">
-          <img :src="`${projects.img}`" :alt="`${projects.name}`" />
+          <img :src="projects.img" :alt="projects.name" />
           <p class="project-name-xs">{{ projects.name }}</p>
           <span class="expanded fade-in fade-in-delay">
             <p class="language fade-in fade-in-delay">
@@ -21,10 +21,10 @@
             </p>
             <a
               v-if="projects.githublink"
-              v-on:click.stop
+              :href="projects.githublink"
               class="github-link fade-in fade-in-delay"
-              :href="`${projects.githublink}`"
               target="_blank"
+              @click.stop
             >
               <span>View on Github</span>
               <img src="../assets/images/github.png" class="github-img" />
@@ -35,8 +35,7 @@
         <span
           class="expanded content fade-in fade-in-delay"
           v-html="projects.info"
-        >
-        </span>
+        />
       </div>
     </div>
   </div>
@@ -123,7 +122,7 @@ export default {
     margin-top: 10px;
     display: block;
     width: 280px;
-    height: fit-content;
+    max-height: fit-content;
     filter: blur(1px);
     -webkit-transition: filter 1s ease-in-out;
     -moz-transition: filter 1s ease-in-out;

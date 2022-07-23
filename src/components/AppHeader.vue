@@ -27,7 +27,7 @@
 export default {
   data() {
     return {
-      home: null,
+      home: false,
       social: [
         {
           name: "Github",

@@ -5,10 +5,14 @@
       Bachelors's in Computer Science. I've always enjoyed programming but,
       after school, I discovered that I had a passion for web development.
       <br />
-      I currently work in Technical Operations at Apptegy, but I try to work on
-      projects and learn code in my free time. I’m currently focusing on
-      learning more about Vue and I'm working on a new social media application
-      to help. Feel free to view my progress in the Projects tab!
+      I started working at Apptegy in Technical Operations where I lead client
+      focused support shifts, tested software changes before releasing to
+      production, and helped write scripts for various client needs
+      <br />
+      After working in Tech Ops for about a year and a half, I joined the
+      engineering team as a front end developer working primarily in the Vue.js
+      framework, but also doing various backend changes using Ruby on Rails as
+      well.
     </div>
     <img src="@/assets/images/headshot.jpg" alt="Headshot" class="right" />
   </div>
@@ -33,7 +37,7 @@
   line-height: 28px;
 }
 .right {
-  height: 40vh;
+  height: 43vh;
   border-radius: 20%;
   margin-left: -40px;
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
